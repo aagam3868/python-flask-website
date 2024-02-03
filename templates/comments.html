@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for ( 'static', filename = 'css/comment.css' ) }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for ( 'static', filename = 'css/utils.css' ) }}"
+    />
+    <title>Comments</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+          <a href="/">
+            <span
+              ><img
+                src="{{ url_for ( 'static', filename = 'images/logo.jpg' ) }}"
+                width="200px"
+                alt=""
+            /></span>
+          </a>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-right">
+          <form action="/" method="get">
+            <input
+              class="form-input"
+              type="text"
+              name="query"
+              placeholder="Article Search"
+            />
+            <button class="btn">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <div class="max-width-1 m-auto">
+      <hr />
+    </div>
+    <main>
+        <div class="subheading">
+            <h3>Comments: </h3>
+          </div>
+      <div>
+        <table class = "comment">
+          <thead>
+            <tr>
+              <th>sno</th>
+              <th>name</th>
+              <th>email</th>
+              <th>comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if comments|length == 0 %} no record {% else %} {% for comment in
+            comments %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{comment.name}}</td>
+              <td>{{comment.email}}</td>
+              <td>{{comment.comment}}</td>
+            </tr>
+            {% endfor %} {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <div class="footer">
+      <p>Copyright &copy; Moviefans.com</p>
+    </div>
+  </body>
+</html>

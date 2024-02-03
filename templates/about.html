@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for ( 'static', filename = 'css/about.css' ) }}"/>
+
+      <link
+      rel="stylesheet"
+      href="{{ url_for ( 'static', filename = 'css/utils.css' ) }}"/>
+      
+
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+          <a href="/">
+            <span
+              ><img
+                src="{{ url_for ( 'static', filename = 'images/logo.jpg' ) }}"
+                width="200px"
+                alt=""
+            /></span>
+          </a>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-right">
+          <form action="/" method="get">
+            <input
+              class="form-input"
+              type="text"
+              name="query"
+              placeholder="Article Search"
+            />
+            <button class="btn">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <div class="max-width-1 m-auto">
+        <hr />
+    </div>
+
+    <main>
+        <div class="m-auto content max-width-1 my-2">
+            <div class="content-left">
+              <h1>About Moviefans</h1>
+              <p>
+                Welcome to Moviefans, a dedicated space for movie enthusiasts
+                 and cinephiles to explore the vast and mesmerizing world of cinema. Our 
+                 passion for storytelling through film drives us to create a community 
+                 where every movie lover can find a home.
+              </p>
+            </div>
+        </div>
+
+        <div class="m-auto content max-width-1 my-2">
+            <div class="content-left">
+              <h1>Our Mission</h1>
+              <p>
+                At Moviefans, we believe in the power of cinema to inspire, entertain,
+                 and provoke thought. Our mission is to curate a diverse selection of 
+                 movies, spanning various genres and cultures, ensuring that there's 
+                 something for everyone. We aim to foster a community where individuals 
+                 can share their love for film, engage in discussions, and discover hidden 
+                 cinematic gems.
+              </p>
+            </div>
+        </div>
+
+        <div class="m-auto content max-width-1 my-2">
+            <div class="content-left">
+              <h1>Our Commitment</h1>
+              <p>
+                Moviefans is committed to creating a welcoming and inclusive space for all. 
+                We strive to be a go-to resource for movie lovers, whether you're a seasoned 
+                film buff or a casual viewer looking for your next favorite movie. Our dedication 
+                to quality content, engaging discussions, and a user-friendly experience sets us apart 
+                as a premier destination for cinema aficionados.
+
+                Thank you for being part of the Moviefans community. Together, let's celebrate the magic 
+                of movies and embark on an exciting cinematic journey!
+              </p>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+      <p>Copyright &copy; Moviefans.com</p>
+    </div>
+  </body>
+</html>

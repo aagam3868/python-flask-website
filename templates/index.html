@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for ( 'static', filename = 'css/style.css' ) }}" />
+  <link rel="stylesheet" href="{{ url_for ( 'static', filename = 'css/utils.css' ) }}" />
+  <title>Moviefans</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navigation max-width-1 m-auto">
+      <div class="nav-left">
+        <a href="/">
+          <span><img src="{{ url_for ( 'static', filename = 'images/logo.jpg' ) }}" width="200px" alt="" /></span>
+        </a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <form action="/" method="get">
+          <input class="form-input" type="text" name="query" placeholder="Article Search" />
+          <button class="btn">Search</button>
+        </form>
+      </div>
+    </nav>
+    <p class="date">Published on: <span id="date-time"></span></p>
+  </header>
+
+  <div class="max-width-1 m-auto">
+    <hr />
+  </div>
+  <div class="m-auto content max-width-1 my-2">
+    <div class="content-left">
+      <h1>The heaven for moviefans</h1>
+      <p>
+        Welcome to Moviefans, where the magic of cinema comes to life! Immerse
+        yourself in an expansive collection of films spanning various genres
+        and originating from diverse corners of the globe. Whether you're
+        seeking classic masterpieces, contemporary blockbusters, or hidden
+        gems, our comprehensive movie database has it all. From heartwarming
+        romances to spine-tingling thrillers, our blog offers a cinematic
+        journey that caters to every mood and taste. Dive into insightful
+        reviews, exclusive interviews, and stay up-to-date with the latest
+        industry news. Join our passionate community of movie enthusiasts,
+        share your thoughts, and discover the world of film in a whole new
+        light. Welcome to a space where every movie, from every genre and
+        every country, finds its place in the spotlight.
+      </p>
+    </div>
+    <div class="content-right">
+      <img src="{{ url_for ( 'static', filename = 'images/blog.png' ) }}" alt="iBlog" />
+    </div>
+  </div>
+
+  <div class="max-width-1 m-auto">
+    <hr />
+  </div>
+  <div class="home-articles max-width-1 m-auto font2">
+    <h2>Featured Articles</h2>
+
+    <div class="home-article">
+      <div class="home-article-img">
+        <img src="{{ url_for ( 'static', filename = 'images/article1.jpeg' ) }}" alt="article" />
+      </div>
+      <div class="home-article-content font1">
+        <a href="/blogpost.html">
+          <h3>John Wick 4</h3>
+        </a>
+
+        <div>Aagam Gupta</div>
+        <span>02 February | 6 min read</span>
+      </div>
+    </div>
+
+    <div class="home-article">
+      <div class="home-article-img">
+        <img src="{{ url_for ( 'static', filename = 'images/article2.jpeg' ) }}" alt="article" />
+      </div>
+      <div class="home-article-content font1">
+        <a href="/blogpost.html">
+          <h3>Conjuring 4</h3>
+        </a>
+
+        <div>Aagam Gupta</div>
+        <span>01 February | 10 min read</span>
+      </div>
+    </div>
+
+    <div class="home-article">
+      <div class="home-article-img">
+        <img src="{{ url_for ( 'static', filename = 'images/article3.jpeg' ) }}" alt="article" />
+      </div>
+      <div class="home-article-content font1">
+        <a href="/blogpost.html">
+          <h3>Wonka</h3>
+        </a>
+
+        <div>Aagam Gupta</div>
+        <span>02 February | 4 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Copyright &copy; Moviefans.com</p>
+  </div>
+  <script>
+    document.getElementById("date-time").innerText =
+      new Date().toLocaleString();
+  </script>
+</body>
+
+</html>
